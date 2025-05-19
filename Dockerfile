@@ -39,7 +39,7 @@ RUN mkdir -p /app && \
 USER $UID:$GID
 
 # Clone repository
-RUN git clone https://github.com/lllyasviel/FramePack /app
+RUN git clone https://github.com/lllyasviel/FramePack.git /app
 WORKDIR /app
 
 # Create virtual environment as user
