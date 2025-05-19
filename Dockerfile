@@ -35,11 +35,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN mkdir -p /app && \
     chown -R $UID:$GID /app
     
-# Copy entrypoint script
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh && \
-    chown $UID:$GID /entrypoint.sh
-
 # Switch to non-root user
 USER $UID:$GID
 
