@@ -18,14 +18,14 @@ jobs:
         
         # all of these default to true, but feel free to set to
         # "false" if necessary for your workflow
-        android: true
-        dotnet: true
-        haskell: true
+        # android: true
+        # dotnet: true
+        # haskell: true
         large-packages: true
         docker-images: true
         swap-storage: true
   
-  docker:
+  docker-build-and-push:
     runs-on: ubuntu-latest
     steps:
       -
