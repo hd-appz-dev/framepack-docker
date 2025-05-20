@@ -1,6 +1,7 @@
 #FROM nvidia/cuda:12.6.0-devel-ubuntu22.04
 #FROM nvidia/cuda:12.2.2-cudnn8-devel-ubuntu22.04
-FROM nvidia/cuda:12.6.3-cudnn-runtime-ubuntu22.04
+#FROM nvidia/cuda:12.6.3-cudnn-runtime-ubuntu22.04
+FROM pytorch/pytorch:2.7.0-cuda12.6-cudnn9-devel
 # Set user/group IDs to match host user (default 1000 for first user)
 ARG UID=1000
 ARG GID=1000
