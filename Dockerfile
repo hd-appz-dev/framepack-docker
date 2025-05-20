@@ -1,7 +1,7 @@
 #FROM nvidia/cuda:12.6.0-devel-ubuntu22.04
 #FROM nvidia/cuda:12.2.2-cudnn8-devel-ubuntu22.04
 #FROM nvidia/cuda:12.6.3-cudnn-runtime-ubuntu22.04
-FROM pytorch/pytorch:2.7.0-cuda12.6-cudnn9-devel
+FROM pytorch/pytorch:2.6.0-cuda12.6-cudnn9-devel
 # Set user/group IDs to match host user (default 1000 for first user)
 ARG UID=1000
 ARG GID=1000
@@ -49,7 +49,7 @@ WORKDIR /app
 RUN python3.10 -m venv $VIRTUAL_ENV
 
 # Install Python dependencies
-RUN pip install --no-cache-dir torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 pytorch-cuda --index-url https://download.pytorch.org/whl/cu124
+RUN pip install --no-cache-dir torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
 
 # Install requirements
 RUN pip install --no-cache-dir -r requirements.txt
