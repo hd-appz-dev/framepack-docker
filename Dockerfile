@@ -41,7 +41,7 @@ USER $UID:$GID
 
 # Clone repository
 RUN git clone https://github.com/lllyasviel/FramePack.git /app
-WORKDIR /app/FramePack
+WORKDIR /app
 
 # Create virtual environment as user
 RUN python3.10 -m venv $VIRTUAL_ENV
