@@ -48,7 +48,7 @@ WORKDIR /app
 RUN python3.10 -m venv $VIRTUAL_ENV
 
 # Install Python dependencies
-RUN pip install --no-cache-dir torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+RUN pip install --no-cache-dir torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 pytorch-cuda --index-url https://download.pytorch.org/whl/cu124
 
 # Install requirements
 RUN pip install --no-cache-dir -r requirements.txt
